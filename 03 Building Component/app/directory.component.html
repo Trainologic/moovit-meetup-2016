@@ -1,0 +1,10 @@
+<h2>{{getFullPath(dir)}}</h2>
+
+<ul>
+    <li *ngIf="!!dir.parent" class="is-dir" (click)="up()">
+        [..]
+    </li>
+    <li *ngFor="let item of dir.items" [ngClass]="{'is-dir': item.isDir}" (click)="activate(item)">
+        <span>{{item.name}}</span>
+    </li>
+</ul>

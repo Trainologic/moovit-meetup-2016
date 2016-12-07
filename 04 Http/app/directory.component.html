@@ -1,0 +1,10 @@
+<div class="path">{{dir && dir.path}}</div>
+
+<ul *ngIf="!!dir">
+    <li *ngIf="dir.path!=='/'" class="is-dir" (dblclick)="up()">
+        [..]
+    </li>
+    <li *ngFor="let item of dir.items" [ngClass]="{'is-dir': item.isDir}" (dblclick)="activate(item)">
+        <span>{{item.name}}</span>
+    </li>
+</ul>

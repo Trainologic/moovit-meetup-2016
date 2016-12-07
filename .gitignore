@@ -1,0 +1,10 @@
+﻿*.dll
+node_modules
+bin
+obj
+packages
+.idea
+**/app/**/*.js
+**/app/**/*.js.map
+**/app/**/*.css
+**/app/**/*.css.map
